@@ -128,7 +128,15 @@ namespace HospitalManagementSystem
 
         private void cboDoctorName_SelectedValueChanged(object sender, EventArgs e)
         {
+            if (cboDoctorName.SelectedValue != null)
+            {
+                var query = db.doctors.FirstOrDefault(x => x.name == cboDoctorName.Text);
 
+                if (query != null)
+                {
+                    doctorRoom = query.assigned_room;
+                }
+            }
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -148,7 +156,7 @@ namespace HospitalManagementSystem
                     query.queue_number = Convert.ToInt32( lblQueneNumber.Text);
                     query.date = dtpDate.Value;
                     query.created_at = DateTime.Now;
-                    query.room = "300";
+                    query.room = doctorRoom;
 
                     db.meetings.InsertOnSubmit(query);
                     db.SubmitChanges();

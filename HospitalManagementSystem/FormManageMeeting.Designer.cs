@@ -113,6 +113,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormManageMeeting";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormManageMeeting";
             this.Load += new System.EventHandler(this.FormManageMeeting_Load);
             this.groupBox1.ResumeLayout(false);

@@ -82,6 +82,7 @@
             this.Controls.Add(this.tbNotes);
             this.Controls.Add(this.label3);
             this.Name = "FormDialog";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDialog";
             this.Load += new System.EventHandler(this.FormDialog_Load);
             this.ResumeLayout(false);

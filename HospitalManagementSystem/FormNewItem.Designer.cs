@@ -125,6 +125,7 @@
             this.Controls.Add(this.tbItem);
             this.Controls.Add(this.label3);
             this.Name = "FormNewItem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormNewItem";
             this.ResumeLayout(false);
             this.PerformLayout();

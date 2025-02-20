@@ -68,6 +68,7 @@
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.lblMedical);
             this.Name = "FormPatientRecord";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPatientRecord";
             this.Load += new System.EventHandler(this.FormPatientRecord_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
